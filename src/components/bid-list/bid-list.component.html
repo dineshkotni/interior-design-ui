@@ -1,0 +1,15 @@
+<section class="bid-list-container">
+    <div class="bid-list-content">
+        <ul class="bid-list">
+            <li *ngFor="let bid of bidInfo">
+                <figure [routerLink]="['/bid',bid.id]">
+                    <img src="{{bid?.img}}" alt="testing" style="width:100%">
+                    <figcaption>
+                        <div class="bid-customer text-center">{{bid?.customer}}</div>
+                        <div class="price text-center">{{bid?.price | currency:'INR'}}</div>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</section>

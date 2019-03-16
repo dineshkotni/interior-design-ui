@@ -1,0 +1,28 @@
+<section class="bid-details-container">
+    <div class="bid-details-content">
+        <img src="{{bidDetails?.img}}" />
+        <div class="row">
+            <div class="customer col-6">
+                {{bidDetails?.customer}}
+            </div>
+            <div class="price col-6">
+                {{bidDetails?.price | currency:'INR'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="number" [(ngModel)]="price" placeholder="price" />
+            </div>
+            <div class="col-6">
+                <input type="text" [(ngModel)]="name" pattern="name" />
+            </div>
+        </div>
+        <div class="text-center button-container">
+
+            <button class="btn-primary" (click)="submit()">
+                Place bid
+            </button>
+        </div>
+
+    </div>
+</section>
